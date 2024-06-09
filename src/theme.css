@@ -1,5 +1,12 @@
 /* css主题设置 */
 
 :root:root {
-  --adm-color-primary: #0cf;
+  /* --adm-color-primary: #0cf; */
+  --adm-font-size-1: 16px;
+  --adm-font-size-2: 16px;
+  --adm-font-size-3: 16px;
+  --adm-font-size-4: 16px;
+  --adm-font-size-5: 16px;
+  --adm-font-size-6: 16px;
+  --adm-font-size-7: 16px;
 }

@@ -1,28 +1,57 @@
-import { Link, Outlet } from "react-router-dom";
-import './index.css'
+import { Link, Outlet, useNavigate } from "react-router-dom";
+import { TabBar } from "antd-mobile";
+import "./index.css";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getBillList } from "@/store/modules/bill";
 
 export default function Layout() {
+  const tabs = [
+    {
+      key: "/",
+      title: "月度账单",
+      icon: "",
+    },
+    {
+      key: "/bookkeeping",
+      title: "记一笔",
+      icon: "",
+    },
+    {
+      key: "/yearly-bill",
+      title: "年度账单",
+      icon: "",
+    },
+  ];
 
-  const dispatch = useDispatch()
-  
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
   // 相当于mounted钩子函数，组件加载完成时调用
   useEffect(() => {
-    dispatch(getBillList())
-  }, [dispatch])
+    dispatch(getBillList());
+  }, [dispatch]);
+
+  const setRouteActive = (value) => {
+    console.log(value);
+    navigate(value)
+  }
 
   return (
     <>
       <div className="page-layout">
-        <h1>我是layout</h1>
-        <Outlet></Outlet>
+        <div className="page-content">
+          <div>我是layout</div>
+          <Outlet></Outlet>
+        </div>
 
-        <div className="menu-list">
-          <Link to="/">月度账单</Link>
-          <Link to="/yearly-bill">年度账单</Link>
-          <Link to="/bookkeeping">记一笔</Link>
+        <div className="footer">
+          <TabBar onChange={value => setRouteActive(value)}>
+            {tabs.map((item) => (
+              <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
+            ))}
+          </TabBar>
         </div>
       </div>
     </>
