@@ -1,5 +1,5 @@
 import { Link, Outlet, useNavigate } from "react-router-dom";
-import { TabBar } from "antd-mobile";
+import { NavBar, TabBar } from "antd-mobile";
 import "./index.css";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -42,7 +42,6 @@ export default function Layout() {
     <>
       <div className="page-layout">
         <div className="page-content">
-          <div>我是layout</div>
           <Outlet></Outlet>
         </div>
 

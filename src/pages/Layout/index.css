@@ -11,6 +11,11 @@ html, body, #root {
 .page-content {
   width: 100%;
   height: calc(100% - 48px);
+  background-color: #f5f5f5;
+}
+
+.adm-nav-bar {
+  background-color: #fff;
 }
 
 .footer {

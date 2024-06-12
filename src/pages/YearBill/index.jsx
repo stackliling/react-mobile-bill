@@ -1,7 +1,9 @@
+import { NavBar } from "antd-mobile"
+
 export default function YearBill() {
   return (
     <>
-      年度账单
+      <NavBar>年度账单</NavBar>
     </>
   )
 }

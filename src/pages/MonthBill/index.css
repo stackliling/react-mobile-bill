@@ -1,0 +1,48 @@
+.monthly-bill {
+
+}
+
+.monthly-bill .content {
+
+}
+
+.monthly-bill .content .header {
+  margin: 10px 10px 0 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 200px;
+  border-radius: 8px;
+  background-image: url("https://img0.baidu.com/it/u=468750395,1854282786&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800");
+  background-size: contain;
+}
+
+
+.monthly-bill .content .header .text {
+  height: 100px;
+  line-height: 100px;
+  color: #000;
+  font-size: 22px;
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.overview {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.item {
+  display: flex;
+  flex-direction: row-reverse;
+  line-height: 24px;
+}
+
+.monthly-bill .content .header .arrow {
+  padding-left: 3px;
+  font-size: 18px;
+  font-weight: 600;
+}
